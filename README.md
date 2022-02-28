@@ -1,5 +1,5 @@
 # Praktikum
 
-Repository untuk mengumpulkan tugas praktikum pemrograman web 1
+Repository untuk mengumpulkan tugas praktikum pemrograman web 2
 
 ## Terima Kasih

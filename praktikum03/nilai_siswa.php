@@ -1,3 +1,5 @@
+<?php require_once 'libfungsi.php' ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,45 +34,10 @@
                 <li class="list-group-item">Nilai UAS : <?= $_POST['uas'] ?></li>
                 <li class="list-group-item">Nilai Tugas/Praktikum : <?= $_POST['tugas'] ?></li>
                 <?php $nilai_total = ($_POST['uts'] * 30/100) + ($_POST['uas'] * 35/100) + ($_POST['tugas'] * 35/100) ?>
-                <li class="list-group-item">Kelulusan : <?= $nilai_total > 55 ? '<span class="badge bg-success">Lulus</span>' : '<span class="badge bg-danger">Tidak Lulus</span>' ?></li>
-                <?php $grade = '';
-                    if ($nilai_total >= 85 && $nilai_total <= 100) {
-                        $grade = 'A';
-                    } elseif ($nilai_total <= 84 && $nilai_total >= 70) {
-                        $grade = 'B';
-                    } elseif ($nilai_total <= 69 && $nilai_total >= 56) {
-                        $grade = 'C';
-                    } elseif ($nilai_total <= 55 && $nilai_total >= 36) {
-                        $grade = 'D';
-                    } elseif ($nilai_total <= 35 && $nilai_total >= 0) {
-                        $grade = 'E';
-                    } else {
-                        $grade = 'I';
-                    }
-                ?>
+                <li class="list-group-item">Kelulusan : <?= kelulusan($nilai_total) ?></li>
+                <?php $grade = grade($nilai_total) ?>
                 <li class="list-group-item">Grade : <?= $nilai_total > 55 ? "<span class='text-success fw-bold'>$grade</span>" : "<span class='text-danger fw-bold'>$grade</span>" ?></li>
-                <?php $predikat = '';
-                    switch ($grade) {
-                        case 'A':
-                            $predikat = 'Sangat Memuaskan';
-                            break;
-                        case 'B':
-                            $predikat = 'Memuaskan';
-                            break;
-                        case 'C':
-                            $predikat = 'Cukup';
-                            break;
-                        case 'D':
-                            $predikat = 'Kurang';
-                            break;
-                        case 'E':
-                            $predikat = 'Sangat Kurang';
-                            break;
-                        default:
-                            $predikat = 'Tidak Ada';
-                            break;
-                    }
-                ?>
+                <?php $predikat = predikat($grade) ?>
                 <li class="list-group-item">Predikat : <?= $nilai_total > 55 ? "<span class='text-success fw-bold'>$predikat</span>" : "<span class='text-danger fw-bold'>$predikat</span>" ?></li>
             </ul>
             <a href="form_nilai.php" class="btn btn-primary mt-2" title="Kembali Ke Form">Kembali</a>

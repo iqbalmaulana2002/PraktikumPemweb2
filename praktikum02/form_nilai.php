@@ -33,14 +33,14 @@
                     <div class="row mb-3">
                         <label class="col-sm-5 col-md-3 col-form-label">Nama Lengkap</label>
                         <div class="col-sm-7 col-md-9">
-                            <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required autocomplete="off">
+                            <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off">
                             <div class="invalid-feedback">Nama Lengkan harus diisi</div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-5 col-md-3 col-form-label">Mata Kuliah</label>
                         <div class="col-sm-7 col-md-9">
-                            <select class="form-select" name="matkul" required>
+                            <select class="form-select" name="matkul">
                                 <option selected disabled value="">-- Pilih Mata Kuliah --</option>
                                 <option>Pemrograman WEB 2</option>
                                 <option>Jaringan Komputer</option>
@@ -52,21 +52,21 @@
                     <div class="row mb-3">
                         <label class="col-sm-5 col-md-3 col-form-label">Nilai UTS</label>
                         <div class="col-sm-7 col-md-9">
-                            <input type="text" class="number form-control" name="uts" placeholder="Nilai UTS" required autocomplete="off">
+                            <input type="text" class="number form-control" name="uts" placeholder="Nilai UTS" autocomplete="off">
                             <div class="invalid-feedback">Nilai UTS harus diisi</div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-5 col-md-3 col-form-label">Nilai UAS</label>
                         <div class="col-sm-7 col-md-9">
-                            <input type="text" class="number form-control" name="uas" placeholder="Nilai UAS" required autocomplete="off">
+                            <input type="text" class="number form-control" name="uas" placeholder="Nilai UAS" autocomplete="off">
                             <div class="invalid-feedback">Nilai UAS harus diisi</div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-5 col-md-3 col-form-label">Nilai Tugas/Praktikum</label>
                         <div class="col-sm-7 col-md-9">
-                            <input type="text" class="number form-control" name="tugas" placeholder="Nilai Tugas" required autocomplete="off">
+                            <input type="text" class="number form-control" name="tugas" placeholder="Nilai Tugas" autocomplete="off">
                             <div class="invalid-feedback">Nilai Tugas/Praktikum harus diisi</div>
                         </div>
                     </div>

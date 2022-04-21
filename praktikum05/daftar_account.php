@@ -29,15 +29,12 @@
                 foreach ($arrAccount as $valueAccount):
             ?>
                 <tr>
-                    <td><?= $i; ?></td>
+                    <td><?= $i++; ?></td>
                     <td><?= $valueAccount->getProperties('nomor'); ?></td>
                     <td><?= $valueAccount->getProperties('nama'); ?></td>
                     <td><?= number_format($valueAccount->getProperties('saldo'), 2, ',', '.'); ?></td>
                 </tr>
-            <?php
-                $i++;
-                endforeach;
-            ?>
+            <?php endforeach ?>
         </tbody>
     </table>
 </body>

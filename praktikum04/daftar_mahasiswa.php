@@ -39,9 +39,14 @@ $mahasiswas = [$mahasiswa1, $mahasiswa2, $mahasiswa3, $mahasiswa4, $mahasiswa5];
                 foreach ($mahasiswas as $mahasiswa): ?>
                 <tr>
                     <th scope="row"><?= $no++ ?></th>
-                    <td><?= $no++ ?></td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><?= $mahasiswa->nim ?></td>
+                    <td><?= $mahasiswa->nama ?></td>
+                    <td><?= $mahasiswa->thn_angkatan ?></td>
+                    <td><?= $mahasiswa->prodi ?></td>
+                    <td><?= $mahasiswa->ipk ?></td>
+                    <td>
+                      <a href="#" class="btn btn-primary"><i class="fas fa-search-plus"></i> Detail</a>
+                    </td>
                 </tr>
             <?php endforeach ?>
         </tbody>

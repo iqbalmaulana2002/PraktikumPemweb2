@@ -31,7 +31,7 @@
                 <li class="list-group-item">Nilai UAS : <?= $_POST['uas'] ?></li>
                 <li class="list-group-item">Nilai Tugas/Praktikum : <?= $_POST['tugas'] ?></li>
                 <?php $nilai_total = ($_POST['uts'] * 30/100) + ($_POST['uas'] * 35/100) + ($_POST['tugas'] * 35/100) ?>
-                <li class="list-group-item">Kelulusan : <?= $nilai_total > 55 ? '<span class="badge bg-success">Lulus</span>' : '<span class="badge bg-danger">Tidak Lulus</span>' ?></li>
+                <li class="list-group-item">Kelulusan : <?= $nilai_total > 55 && $nilai_total <= 100 ? '<span class="badge bg-success">Lulus</span>' : '<span class="badge bg-danger">Tidak Lulus</span>' ?></li>
                 <?php $grade = '';
                     if ($nilai_total >= 85 && $nilai_total <= 100) {
                         $grade = 'A';
@@ -47,7 +47,7 @@
                         $grade = 'I';
                     }
                 ?>
-                <li class="list-group-item">Grade : <?= $nilai_total > 55 ? "<span class='text-success fw-bold'>$grade</span>" : "<span class='text-danger fw-bold'>$grade</span>" ?></li>
+                <li class="list-group-item">Grade : <?= $nilai_total > 55 && $nilai_total <= 100 ? "<span class='text-success fw-bold'>$grade</span>" : "<span class='text-danger fw-bold'>$grade</span>" ?></li>
                 <?php $predikat = '';
                     switch ($grade) {
                         case 'A':
@@ -70,7 +70,7 @@
                             break;
                     }
                 ?>
-                <li class="list-group-item">Predikat : <?= $nilai_total > 55 ? "<span class='text-success fw-bold'>$predikat</span>" : "<span class='text-danger fw-bold'>$predikat</span>" ?></li>
+                <li class="list-group-item">Predikat : <?= $nilai_total > 55 && $nilai_total <= 100 ? "<span class='text-success fw-bold'>$predikat</span>" : "<span class='text-danger fw-bold'>$predikat</span>" ?></li>
             </ul>
             <a href="form_nilai.php" class="btn btn-primary mt-2" title="Kembali Ke Form">Kembali</a>
         <?php endif ?>
